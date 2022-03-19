@@ -15,7 +15,7 @@ $("#pizzaDelivery").change(function(){
   }
   
 });
-//reset fields on addition to cart
+
 const resetFields = ()=>{
   let inputSize = $("#pizza-size").val("");
   let inputCrust = $("#pizza-crust").val("");
@@ -54,21 +54,6 @@ Order.prototype.totalCost = function(){
 
 }
 
-Order.prototype.grandTotals = function(){
-  
-  
-     grandTotal = grandTotal + this.totalCost();
-     console.log(this.totalCost());
-     console.log(grandTotal);
-     return grandTotal;
-  
-}
-Order.prototype.gt = function(){
-  return this.grandTotals();
-}
-
-
-
 //costs object
 const Costs = {
   pizzaSize:{
@@ -94,7 +79,6 @@ const Costs = {
     pickup: 0 
   }
 }
-
 
 addToList.addEventListener("click",(e)=>{
   e.preventDefault();
@@ -123,12 +107,7 @@ addToList.addEventListener("click",(e)=>{
   $(".table").append("<tr>"+anOrder.showSummary()+"</tr>");
   $(".orders").text(`Orders = ${orderCounter+=1}`);
  
-  
-  
- 
- 
 })
-
 $("#close").click(function(){
   document.getElementById("pform").reset();
   
@@ -137,8 +116,6 @@ $("#close").click(function(){
 
 
 });
-
-
 
 addOrder.addEventListener("click", function (){
 

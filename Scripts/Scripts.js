@@ -26,7 +26,7 @@ const resetFields = ()=>{
 //order constructor
 function Order(number,sizes, crust, quantity, delivery ,topping){
 
-  this.orderNumber = number+1;
+  this.orderNumber = number;
   this.sizes = sizes;
   this.crust = crust;
   this.quantity = quantity;
@@ -107,8 +107,12 @@ addToList.addEventListener("click",(e)=>{
     let inputDelivery = $("#pizzaDelivery").val();
 
        if(inputDelivery == "delivery"){
-            alert("Your order will be delivered"+$("#pizza-place").val());
+         if($("#pizza-place").val() != ""){
+            alert("Your order will be delivered "+$("#pizza-place").val());
+         }
+        
         }
+      
      $("input:checkbox[name='top']:checked").each(function(){
         toppingArr.push($(this).val());
        });
@@ -127,6 +131,7 @@ addToList.addEventListener("click",(e)=>{
 
 $("#close").click(function(){
   document.getElementById("pform").reset();
+  
   $(".displayOrders").hide();
   $(".displayForm").show();
 

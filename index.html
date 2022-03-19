@@ -16,19 +16,19 @@
       <span class="spanColor">E</span>v <span class="spanColor"> Piz</span>zette
       <hr>
     </h1>
-    <div>
-      <img class="one" src="./Assets/Fresh-pizza-dish-26200-pixahive-768x576 (1).jpg" alt="yummy">
-      <img class="two"src="./Assets/pizza-12505-pixahive-768x558.jpg" alt="">
-      <img class="three" src="./Assets/Pizza-131553-pixahive-768x512.jpg" alt="yummy">
-    </div>
-    <div class="button col-md-4">
+        <img class="hide" src="https://www.cookipedia.co.uk/wiki/images/a/a9/New_York-style_stone_baked_pizza_recipe.jpg"  width="300px"alt="yummy">
+        <img src="https://www.publicdomainpictures.net/pictures/270000/velka/pizza-1532881335pCX.jpg" width="300px"alt="yummy">
+        <img class="" src="https://www.publicdomainpictures.net/pictures/10000/velka/pizza-topping-87127713332743Vt.jpg" alt="yummy" width="300px">
+        </div>
+
+    <div class="button my-5">
       <a href="#order" class="btnOrder"> Order Now </a>
    </div>
   </div>
 
   <div class="container-fluid menu text-center">
       <h2 class="h2">Our Servings</h2>
-      <ul>
+      <ul class="p-5">
         <li>
           Deliveries, pickups and eatins.
         </li>
@@ -149,50 +149,48 @@
   <label for="pizza-place">
      Place of Delivery
   </label>
-  <input type="text" name="" class="form-control" id="pizza-place">
+  <input type="text" name="" value="CBD" class="form-control" id="pizza-place">
  </div>
 
  <div class="form-group">
   <br>
-  <button class="btn bg-info float-start" id="placeOrder">
+  <button class="btn float-start" id="placeOrder">
     Add to List
   </button>
   
-  <span class="btn bg-info float-end" id="addOrder">
+  <span class="btn float-end" id="addOrder">
     Checkout
    </span>
-   <span class="orders mx-2 float-end">  </span>
+   <span class="orders mx-2"> Order? </span>
    </div>
 
 
   </form>
   </div>
 
-  <div class="container-fluid w-75 displayOrders">
-    <ul class="row">
-
-    </ul>
-    <table class="table word-wrap">
+  <div class="container w-75 displayOrders">
+   
+    <table class="table word-wrap table-responsive">
       <tr class="trow">
-        <th>
+        <th scope="col">
           Order
         </th>
-        <th>
+        <th scope="col">
           Size
         </th>
-        <th>
+        <th scope="col">
           Crust
         </th>
-        <th>
+        <th scope="col">
           Topping/s
         </th>
-        <th>
+        <th scope="col">
           Pieces
         </th>
-        <th>
+        <th scope="col">
           Delivery
         </th>
-        <th>
+        <th scope="col">
           Cost &dollar;
         </th>
         
@@ -207,7 +205,7 @@
       </p>
     </div>
     
-    <span class="btn bg-info" id="close">
+    <span class="btn" id="close" onClick="window.location.reload();">
       Close
      </span>
    
@@ -216,7 +214,7 @@
   </div>
   
 
-  <footer class="bg-dark text-white footer container-fluid">
+  <footer class="bg-dark text-white footer container-fluid text-center">
     <p>
       <small> Eve @2022  </small>   
     </p>

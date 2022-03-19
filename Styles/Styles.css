@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Poppins:wght@300&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.body{
+  
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFC922;
+}
+.spanColor{
+  color: #2285FF;
+}
+.btnOrder{
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #2285FF;
+  text-decoration: none;
+  color: #ffff;
+}
+.page1{
+  height: 80vh;
+}
+
+.menu{
+  background-image: url("../Assets/Yummy-pizza-130402-pixahive-1024x633.jpg");
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25vh;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+ul{
+  list-style: none;
+  background-color: rgba(0,0,0,0.75);
+  width: 50%;
+  margin: auto;
+  
+}
+
+
+
+
+
+
+
+.displayOrders{
+  display: none;
 }

@@ -28,26 +28,30 @@
 
   </div>
 
-  <div class="container" id="form">
+
+  <div class="wrap">
+  <div class="container displayForm" id="form">
     <h2></h2>
-    <form action="">
+    <form action="" class="w-75 myForm m-auto" id="pform">
        <div class="form-group">
           <label for="pizza-type">
              Choose Pizza Size
           </label>
-          <select name="" id="pizza-size" class="form-control">
+          <select name="" id="pizza-size" class="form-control" required>
             <option value="" selected disabled>
               Pizza size
             </option>
-            <option value="small">
-              Small
-            </option>
-            <option value="medium">
-               Medium
-            </option>
-            <option value="large">
+            <option value="Large" selected>
               Large
             </option>
+            <option value="Medium">
+              Medium
+           </option>
+            <option value="Small">
+              Small
+            </option>
+            
+            
           </select>
 
 
@@ -58,18 +62,18 @@
         <label for="pizza-crust">
            Choose Pizza Crust
         </label>
-        <select name="" id="pizza-crust" class="form-control">
+        <select name="" id="pizza-crust" class="form-control pizza-crust" required>
           <option value="" selected disabled>
             Pizza Crust
           </option>
-          <option value="small">
-            Small
+          <option value="Cruspy" selected>
+            Cruspy
           </option>
-          <option value="medium">
-             Medium
+          <option value="Stuffed">
+             Stuffed
           </option>
-          <option value="large">
-            Large
+          <option value="Gfree">
+            Glutten-free
           </option>
         </select>
 
@@ -81,90 +85,118 @@
      <div class="form-group">
       <label for="pizza-toppings">
          Choose Pizza Topping
+      </label> <br>
+      <input type="checkbox" name="top" value="Pepper" id="pepper">
+      <label for="pepper">
+        Pepper
       </label>
-      <select name="" id="pizza-toppings" class="form-control">
-        <option value="" selected disabled>
-          Pizza Topping
-        </option>
-        <option value="small">
-          Small
-        </option>
-        <option value="medium">
-           Medium
-        </option>
-        <option value="large">
-          Large
-        </option>
-      </select>
+      <input type="checkbox" name="top" value="Pineapple" id="pine">
+      <label for="pine">
+        Pineapple
+      </label>
+      
+      <input type="checkbox" name="top" value="Garlic"class="form" id="garlic">
+      <label for="garlic">
+        Garlic
+      </label>
 
-
+      <input type="checkbox" name="top" value="Cheese" class="form" id="cheese">
+      <label for="cheese">
+        Cheese
+      </label>
    </div>
-
    <div class="form-group">
      <label for="pizza-number">Number of pizza</label>
-     <input type="number" name="" min=1 id="pizza-number" class="form-control">
+     <input type="number" name="" value="1" min=1 id="pizza-number" class="form-control">
    </div>
 
    <div class="form-group">
     <label for="pizza-delivery">
        Do you want to pick or have your order delivered
     </label>
-    <select name="" id="pizza-delivery" class="form-control">
+    <select name="" id="pizzaDelivery" class="form-control">
       <option value="" disabled selected>
         Pizza Delivery
       </option>
-      <option value="small">
+      <option value="pickup" selected>
         Pick-Up
       </option>
-      <option value="medium">
+      <option value="delivery">
          Delivery
       </option>
     </select>
 
- </div>
-
-
-<div class="form-group">
+ </div>  
+ <div class="form-group pizza-place d-none">
+  <span class="text-info">You'll be charged an extra &dollar;2 </span><br>
   <label for="pizza-place">
      Place of Delivery
   </label>
-  <input type="text" name="" class="form-control" id="">
+  <input type="text" name="" class="form-control" id="pizza-place">
+ </div>
 
-</div>
-
-<div class="form-group">
-  <button class="btn bg-info">
-      Another Order
+ <div class="form-group">
+  <br>
+  <button class="btn bg-info float-start" id="placeOrder">
+    Add to List
   </button>
-  <button class="btn bg-info">
-      Checkout
-  </button>
-</div>
+  
+  <span class="btn bg-info float-end" id="addOrder">
+    Checkout
+   </span>
+   <span class="orders mx-2 float-end">  </span>
+   </div>
 
 
-
-
-
-
-
-
-    </form>
-
+  </form>
   </div>
 
+  <div class="container-fluid w-75 displayOrders">
+    <ul class="row">
 
+    </ul>
+    <table class="table word-wrap">
+      <tr class="trow">
+        <th>
+          Order
+        </th>
+        <th>
+          Size
+        </th>
+        <th>
+          Crust
+        </th>
+        <th>
+          Topping/s
+        </th>
+        <th>
+          Pieces
+        </th>
+        <th>
+          Delivery
+        </th>
+        <th>
+          Cost &dollar;
+        </th>
+        
+      </tr>
+      
+      
+    </table>
+    <div>
+      <p>
+        Grand Total:
+        <span id="gtotal"></span>
+      </p>
+    </div>
+    
+    <span class="btn bg-info" id="close">
+      Close
+     </span>
+   
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
   
 

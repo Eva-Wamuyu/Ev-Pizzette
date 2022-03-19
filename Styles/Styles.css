@@ -7,7 +7,7 @@
 .body{
   
   font-family: 'Poppins', sans-serif;
-  background-color: #FFC922;
+  
 }
 .spanColor{
   color: #2285FF;
@@ -18,34 +18,65 @@
   background-color: #2285FF;
   text-decoration: none;
   color: #ffff;
+  width: 48px;
+  
+}
+.button{
+  text-align: center;
+  width: 100vw;
+
 }
 .page1{
   height: 80vh;
 }
+.h2,h1{
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+}
 
 .menu{
   background-image: url("../Assets/Yummy-pizza-130402-pixahive-1024x633.jpg");
-  
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25vh;
+  height: 35vh;
   color: white;
   font-family: 'EB Garamond', serif;
 }
 ul{
   list-style: none;
   background-color: rgba(0,0,0,0.75);
-  width: 50%;
+  width: 85vw;
+  height: 28vh;
   margin: auto;
+ 
   
 }
+.hide{
+  display: none;
+}
 
+.order{
+  background-color: white;
+}
 
-
-
-
-
-
+.footer{
+  position: relative;
+  bottom: 0;
+}
 .displayOrders{
   display: none;
+  max-width: 95vw;
+  overflow: auto;
+}
+.btn{
+  background-color: #2285FF;
+  color: white;
+}
+@media screen and (min-width: 760px) {
+  .hide{
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+  
 }

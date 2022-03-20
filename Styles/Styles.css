@@ -24,18 +24,23 @@
   
   
 }
+img{
+  border-radius: 50%;;
+}
 
 .button{
   text-align: center;
   max-width: 100vw;
 
 }
-.page1{
-  height: 80vh;
-}
+
 .h2,h1{
   font-family: 'EB Garamond', serif;
   text-align: center;
+}
+h1{
+  background-color: #ffc922;
+  
 }
 
 .menu{
@@ -82,5 +87,10 @@ ul{
     position: relative;
     margin: auto;
   }
+  .page1{
+    height: 80vh;
+    
+  }
+ 
   
 }

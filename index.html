@@ -8,6 +8,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Pizza|Home</title>
 </head>
 <body class="body">
@@ -52,16 +53,25 @@
   <div class=" displayForm" id="form">
     <h2 class="h2"> Make Your Selection</h2>
     <form action="" class="w-75 myForm m-auto" id="pform">
-      <h5 class="text-info">Add to list before checking out :)</h5>
-       <div class="form-group">
+      <h5 class="text-info">Add to cart before checking out :)</h5>
+      <p class="text-danger d-none errEntry">
+        Choose the size, crust and number of your choice please :)
+      </p>
+      <span class="fa-stack fa-2x has-badge float-end  addOrder"  data-count="">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+        <sup class="orders text-info p-5"></sup> 
+      </span>
+      <!-- <span class=" float-end"><i class="fa fa-shopping-cart "style="font-size:24px"></i><sup class="orders text-info"></sup> </span> -->
+       <div class="form-group mt-5">
           <label for="pizza-type">
              Choose Pizza Size
           </label>
           <select name="" id="pizza-size" class="form-control" required>
-            <option value="" selected disabled>
+            <option value="0" selected >
               Pizza size
             </option>
-            <option value="Large" selected>
+            <option value="Large">
               Large
             </option>
             <option value="Medium">
@@ -83,10 +93,10 @@
            Choose Pizza Crust
         </label>
         <select name="" id="pizza-crust" class="form-control pizza-crust" required>
-          <option value="" selected disabled>
+          <option value="0" selected>
             Pizza Crust
           </option>
-          <option value="Cruspy" selected>
+          <option value="Cruspy">
             Cruspy
           </option>
           <option value="Stuffed">
@@ -128,33 +138,11 @@
    </div>
    <div class="form-group">
      <label for="pizza-number">Number of pizza</label>
-     <input type="number" name="" value="1" min=1 id="pizza-number" class="form-control">
+     <input type="number" name="" min=1 id="pizza-number" class="form-control">
    </div>
 
-   <div class="form-group">
-    <label for="pizza-delivery">
-       Do you want to pick or have your order delivered
-    </label>
-    <select name="" id="pizzaDelivery" class="form-control">
-      <option value="" disabled selected>
-        Pizza Delivery
-      </option>
-      <option value="pickup" selected>
-        Pick-Up
-      </option>
-      <option value="delivery">
-         Delivery
-      </option>
-    </select>
-
- </div>  
- <div class="form-group pizza-place d-none">
-  <span class="text-info">You'll be charged an extra &dollar;2 </span><br>
-  <label for="pizza-place">
-     Place of Delivery
-  </label>
-  <input type="text" name="" value="CBD" class="form-control" id="pizza-place">
- </div>
+   
+ 
 
  <div class="form-group">
   <br>
@@ -162,10 +150,10 @@
     Add to List
   </button>
   
-  <span class="btn float-end" id="addOrder">
+  <span class="btn float-end addOrder2">
     Checkout
    </span>
-   <span class="orders mx-2"> Order? </span>
+  
    </div>
 
 
@@ -192,9 +180,6 @@
           Pieces
         </th>
         <th scope="col">
-          Delivery
-        </th>
-        <th scope="col">
           Cost &dollar;
         </th>
         
@@ -203,15 +188,56 @@
       
     </table>
     <div>
-      <p>
-        Grand Total:
-        <span id="gtotal"></span>
+      <p class="">
+        Pizza Total::
+        <span id="gtotal" class="text-info"></span>
       </p>
+        
+      <div class="delivery">
+        <div class="form-group">
+         <label for="pizza-delivery">
+            Do you want to pick or have your order delivered
+         </label>
+         <select name="" id="pizzaDelivery" class="form-control">
+           <option value="pickup" selected>
+             Pick-Up
+           </option>
+           <option value="delivery">
+              Delivery
+           </option>
+         </select>
+     
+      </div>  
+      <div class="form-group pizza-place d-none">
+       <span class="text-info">You'll be charged an extra &dollar;2 </span><br>
+       <label for="pizza-place">
+          Place of Delivery
+       </label>
+       <input type="text" name="" class="form-control" id="pizza-place">
+      </div>
+      </div>
     </div>
-    
-    <span class="btn" id="close" onClick="window.location.reload();">
-      Close
+    <span class="btn mt-2 float-start" id="back">
+      Back
      </span>
+    <span class="btn mt-2 float-end" id="confirm">
+      Order
+     </span>
+
+
+     <div class="finalRemarks border mt-5 text-center d-none p-2">
+       <p>
+         Total Bill: &dollar; <span id="totalBill">
+         </span>
+       </p>
+       <p class="d-none deliveryInfo">
+         Your Order Will be delivered at <span id="deliveryPlace"></span>
+       </p>
+
+       <span class="btn bg-light text-dark" id="close" onClick="window.location.reload();">
+        Close
+       </span>
+     </div>
    
   </div>
 

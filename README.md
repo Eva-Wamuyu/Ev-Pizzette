@@ -3,7 +3,7 @@
 
 ### By Eva Wamuyu
 
-![cover](./Assets/cover.png)
+<!-- ![cover](./Assets/cover.png) -->
 ## Table of Content
 
 + [Description](#Description)

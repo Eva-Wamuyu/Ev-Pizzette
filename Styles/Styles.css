@@ -67,7 +67,9 @@ ul{
 .order{
   background-color: white;
 }
-
+.addorder{
+  cursor: pointer;
+}
 .footer{
   position: relative;
   bottom: 0;
@@ -80,6 +82,16 @@ ul{
 .btn{
   background-color: #2285FF;
   color: white;
+}
+.finalRemarks{
+  position: relative;
+  top: -16.5vh;
+  background-color: #2285FF;
+  color: white;
+  height: 18.5vh;
+}
+#totalBill{
+  font-size: larger;
 }
 @media screen and (min-width: 760px) {
   .hide{
